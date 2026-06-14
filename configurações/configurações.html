@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Amor NeuroDivergente</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #8b3dff;
+            --primary-purple: #8b5cf6;
+            --dark-purple: #7e22ce;
+            --pink-accent: #db2777;
+            --primary-hover: #7326df;
+            --primary-light: #f4efff;
+            --bg-light: #f8f7fa;
+            --bg-white: #ffffff;
+            --bg-gray: #f1f5f9;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --input-bg: #f5f4f8;
+            --transition: all 0.25s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        [role="button"]:focus-visible {
+            outline: 3px solid #f59e0b;
+            outline-offset: 3px;
+            border-radius: 8px;
+        }
+
+        /* =========================================
+           MAIN WRAPPER
+           ========================================= */
+        .main-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            overflow-y: auto;
+            width: 100%;
+        }
+
+        /* =========================================
+           NAVBAR
+           ========================================= */
+        .navbar {
+            height: 56px;
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-back {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+        }
+        .btn-back:hover {
+            background-color: var(--primary-purple);
+            color: white;
+            border-color: var(--primary-purple);
+        }
+        .btn-back i {
+            font-size: 14px;
+        }
+
+        .brand-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 24px;
+        }
+        .nav-center a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-center a:hover {
+            color: var(--primary-purple);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .search-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .avatar-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* =========================================
+           CONTEÚDO PRINCIPAL
+           ========================================= */
+        .main-content {
+            flex: 1;
+            padding: 24px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            margin-bottom: 24px;
+        }
+        .page-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        .page-header p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* =========================================
+           GRID DE CONFIGURAÇÕES
+           ========================================= */
+        .settings-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+        }
+
+        .settings-nav-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px 15px;
+            height: fit-content;
+        }
+        .settings-nav-card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
+        .settings-nav-card .view-profile-btn {
+            font-size: 13px;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding-left: 10px;
+        }
+
+        .tab-button {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            text-align: left;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-bottom: 4px;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-button:hover,
+        .tab-button.active {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* =========================================
+           PAINÉIS DE CONTEÚDO
+           ========================================= */
+        .settings-pane {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .settings-pane.active {
+            display: flex;
+        }
+
+        .search-bar-settings {
+            width: 100%;
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 14px;
+            outline: none;
+            margin-bottom: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .settings-content-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .card-header-purple {
+            background-color: #f3e8ff;
+            margin: -24px -24px 20px -24px;
+            padding: 16px 24px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card-header-purple h3 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .btn-outline-edit {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .info-display-group {
+            margin-bottom: 15px;
+        }
+        .info-display-group label {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .info-display-group p {
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            width: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 14px;
+            outline: none;
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+        }
+        .form-control:focus {
+            border-color: var(--primary);
+            background-color: #ffffff;
+        }
+        .form-help-text {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .btn-primary-purple {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary-purple:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary-light {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-danger-red {
+            background-color: #ef4444;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-danger-outline {
+            background: none;
+            border: 1px solid #ef4444;
+            color: #ef4444;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .avatar-edit-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .avatar-wrapper-relative {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .avatar-wrapper-relative img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .camera-overlay-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .item-row-setting {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .item-row-setting:last-child {
+            border-bottom: none;
+        }
+        .item-setting-info h4 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .item-setting-info p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .switch-toggle {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+        .switch-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider-round {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .3s;
+            border-radius: 24px;
+        }
+        .slider-round:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .3s;
+            border-radius: 50%;
+        }
+        input:checked + .slider-round {
+            background-color: var(--primary);
+        }
+        input:checked + .slider-round:before {
+            transform: translateX(20px);
+        }
+
+        .panel-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        /* =========================================
+           ACESSIBILIDADE (ESTILO LOJA)
+           ========================================= */
+        .accessibility-btn {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) translateX(10px);
+            width: 48px;
+            height: 56px;
+            background: var(--primary-purple);
+            color: #ffffff;
+            border-radius: 12px 0 0 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: -2px 4px 12px rgba(139, 92, 246, 0.4);
+            cursor: pointer;
+            z-index: 2000;
+            border: none;
+            padding-right: 6px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .accessibility-btn:hover {
+            transform: translateY(-50%) translateX(0);
+            background-color: var(--dark-purple);
+        }
+        .accessibility-btn:focus-visible {
+            outline: 3px solid var(--pink-accent);
+            outline-offset: 2px;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .accessibility-menu {
+            position: fixed;
+            top: 50%;
+            right: 60px;
+            transform: translateY(-50%) scale(0.95);
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 0;
+            width: 340px;
+            box-shadow: -10px 10px 40px rgba(0,0,0,0.15);
+            z-index: 2001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            overflow: hidden;
+        }
+        .accessibility-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) scale(1);
+        }
+        .accessibility-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            background-color: #f3ebff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .accessibility-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #8b5cf6;
+        }
+        .close-accessibility {
+            background: none;
+            border: none;
+            color: #64748b;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            font-size: 16px;
+        }
+        .close-accessibility:hover {
+            background: rgba(0, 0, 0, 0.05);
+            color: #1e293b;
+        }
+        .accessibility-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 20px;
+        }
+        .access-btn {
+            background: #fdfbfe;
+            border: 1px solid #e6e4ea;
+            border-radius: 12px;
+            padding: 14px 8px;
+            color: #1c1a22;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .access-btn:hover {
+            border-color: #8b5cf6;
+            background-color: #f3ebff;
+        }
+        .access-btn i {
+            font-size: 18px;
+            color: #8b5cf6;
+        }
+        .access-btn span {
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        /* =========================================
+           RESPONSIVIDADE
+           ========================================= */
+        @media (max-width: 1024px) {
+            .nav-center {
+                display: none;
+            }
+            .settings-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .btn-back span {
+                display: none;
+            }
+            .brand-text {
+                display: none;
+            }
+            .card-header-purple {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            .btn-secondary-light {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .accessibility-menu {
+                top: auto;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                transform: translateY(100%);
+                width: 100%;
+                border-radius: 16px 16px 0 0;
+            }
+            .accessibility-menu.active {
+                transform: translateY(0);
+            }
+            .accessibility-btn {
+                top: auto;
+                bottom: 24px;
+                right: 24px;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                transform: none;
+                padding-right: 0;
+                box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+            }
+            .accessibility-btn:hover {
+                transform: scale(1.05);
+            }
+            .accessibility-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- CONTEÚDO PRINCIPAL (SEM SIDEBAR)             -->
+    <!-- ============================================ -->
+    <div class="main-wrapper">
+        
+        <!-- NAVBAR SUPERIOR -->
+        <header class="navbar">
+            <div class="nav-left">
+                <a href="/inicio.html" class="btn-back" title="Voltar para Início">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Início</span>
+                </a>
+                <div class="brand-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <span class="brand-text">Amor NeuroDivergente</span>
+            </div>
+            <nav class="nav-center">
+                <a href="/inicio.html">Início</a>
+                <a href="/Recursos/recursos.html">Recursos</a>
+                <a href="/Quem somos/quem-somos.html">Quem Somos</a>
+                <a href="/Direitos/direitos.html">Direitos</a>
+                <a href="/blog/blog.html">Blog</a>
+                <a href="/comunidade/comunidade.html">Comunidade</a>
+                <a href="/chat-Ia/chat-Ia.html">Chat com IA</a>
+            </nav>
+            <div class="nav-right">
+                <button class="search-btn" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <img src="/img/avatar-1776703979307.png" alt="Avatar" class="avatar-img">
+            </div>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            
+            <div class="page-header">
+                <h1> Configurações</h1>
+                <p>Gerencie sua conta e preferências</p>
+            </div>
+
+            <!-- GRID DE CONFIGURAÇÕES -->
+            <div class="settings-container">
+                
+                <!-- Menu Lateral Interno de Abas -->
+                <div class="settings-nav-card">
+                    <h2>Configurações</h2>
+                    <a href="#" class="view-profile-btn">ver perfil</a>
+                    
+                    <button class="tab-button active" data-target="minhaContaPane"> Minha Conta</button>
+                    <button class="tab-button" data-target="perfilPane">Perfil</button>
+                    <button class="tab-button" data-target="idiomaPane"> Idioma</button>
+                    <button class="tab-button" data-target="privacidadePane"> Privacidade e Segurança</button>
+                </div>
+
+                <!-- Área de Conteúdo das Abas -->
+                <div class="settings-content-area">
+                    <input type="text" class="search-bar-settings" placeholder=" Pesquise nas configurações">
+
+                    <!-- ABA 1: MINHA CONTA -->
+                    <div class="settings-pane active" id="minhaContaPane">
+                        <div class="settings-content-card">
+                            <div class="card-header-purple">
+                                <h3>TonyEsterco</h3>
+                                <button class="btn-outline-edit">Editar Perfil</button>
+                            </div>
+                            <div class="info-display-group">
+                                <label>Nome Exibido</label>
+                                <p>TonyEsterco</p>
+                            </div>
+                            <div class="info-display-group">
+                                <label>Nome de usuário</label>
+                                <p>david.araujo.admin</p>
+                            </div>
+                            <div class="info-display-group">
+                                <label>E-mail</label>
+                                <p>david.araujo.admin@amorneurodivergente.com</p>
+                            </div>
+                        </div>
+
+                        <div class="settings-content-card">
+                            <div class="panel-title"> Senha de autenticação</div>
+                            <button class="btn-secondary-light" style="margin-left:0;">Mudar senha</button>
+                        </div>
+
+                        <div class="settings-content-card">
+                            <div class="panel-title">🔑 Chaves de segurança</div>
+                            <p style="font-size:13px; color:var(--text-muted); margin-bottom:15px;">Adicione uma camada de proteção à sua conta com uma chave de segurança</p>
+                            <button class="btn-secondary-light" style="margin-left:0;">Registrar uma Chave de segurança</button>
+                        </div>
+
+                        <div class="settings-content-card">
+                            <div class="panel-title" style="color:#ef4444;">🗑️ Remoção da conta</div>
+                            <p style="font-size:13px; color:var(--text-muted); margin-bottom:15px;">Desativar sua conta significa que você poderá recuperá-la quando quiser.</p>
+                            <button class="btn-danger-red">Desativar conta</button>
+                            <button class="btn-danger-outline">Excluir conta</button>
+                        </div>
+                    </div>
+
+                    <!-- ABA 2: PERFIL -->
+                    <div class="settings-pane" id="perfilPane">
+                        <div class="settings-content-card">
+                            <div class="avatar-edit-container">
+                                <div class="avatar-wrapper-relative">
+                                    <img src="/img/avatar-1776703979307.png" alt="Avatar Perfil">
+                                    <div class="camera-overlay-btn">📷</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" class="form-control" value="TonyEsterco">
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail</label>
+                                <input type="email" class="form-control" value="david.araujo.admin@amorneurodivergente.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Pronomes</label>
+                                <input type="text" class="form-control" placeholder="Adicionar seus pronomes">
+                                <span class="form-help-text">E.g., ela/dela, ele/dele</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Sobre mim</label>
+                                <textarea class="form-control" style="min-height:100px;" placeholder="Conte sobre você"></textarea>
+                                <span class="form-help-text">0/500</span>
+                            </div>
+                            <button class="btn-primary-purple">Salvar alterações</button>
+                            <button class="btn-secondary-light">Remover avatar</button>
+                        </div>
+                    </div>
+
+                    <!-- ABA 3: IDIOMA -->
+                    <div class="settings-pane" id="idiomaPane">
+                        <div class="settings-content-card">
+                            <div class="item-row-setting" style="background-color: var(--primary-light); padding: 12px; border-radius: 8px;">
+                                <span style="font-weight: 600; color: var(--primary);">Português (Brasil)</span>
+                                <span>✔️</span>
+                            </div>
+                            <div class="item-row-setting" style="padding: 12px;">
+                                <span>English</span>
+                            </div>
+                            <div class="item-row-setting" style="padding: 12px;">
+                                <span>Español</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABA 4: PRIVACIDADE E SEGURANÇA -->
+                    <div class="settings-pane" id="privacidadePane">
+                        <div class="settings-content-card">
+                            <h3 style="margin-bottom:15px;">Privacidade e Segurança</h3>
+                            
+                            <div class="item-row-setting">
+                                <div class="item-setting-info">
+                                    <h4>Perfil público</h4>
+                                    <p>Permitir que outros vejam seu perfil</p>
+                                </div>
+                                <label class="switch-toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider-round"></span>
+                                </label>
+                            </div>
+
+                            <div class="item-row-setting">
+                                <div class="item-setting-info">
+                                    <h4>Mostrar atividade</h4>
+                                    <p>Exibir suas atividades na comunidade</p>
+                                </div>
+                                <label class="switch-toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="slider-round"></span>
+                                </label>
+                            </div>
+
+                            <div class="item-row-setting">
+                                <div class="item-setting-info">
+                                    <h4>Notificações por e-mail</h4>
+                                    <p>Receber atualizações por e-mail</p>
+                                </div>
+                                <label class="switch-toggle">
+                                    <input type="checkbox">
+                                    <span class="slider-round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-content-card">
+                            <div class="item-row-setting">
+                                <div class="item-setting-info">
+                                    <h4>🔒 Autenticação de dois fatores</h4>
+                                    <p>Adicione uma camada extra de segurança à sua conta</p>
+                                </div>
+                                <label class="switch-toggle">
+                                    <input type="checkbox">
+                                    <span class="slider-round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-content-card">
+                            <div class="item-row-setting">
+                                <div class="item-setting-info">
+                                    <h4>💻 Sessões ativas</h4>
+                                    <p>Gerencie seus dispositivos conectados</p>
+                                </div>
+                                <button class="btn-secondary-light">Encerrar todas as sessões</button>
+                            </div>
+                        </div>
+
+                        <div class="settings-content-card">
+                            <div class="item-row-setting">
+                                <div class="item-setting-info">
+                                    <h4>📥 Dados pessoais</h4>
+                                    <p>Gerencie como seus dados são usados</p>
+                                </div>
+                                <button class="btn-secondary-light">Baixar meus dados</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- BOTÃO DE ACESSIBILIDADE (ESTILO LOJA) -->
+    <button class="accessibility-btn" id="btnAcessibilidade" aria-label="Abrir menu de acessibilidade">
+        <i class="fa-solid fa-person"></i>
+    </button>
+
+    <!-- MENU DE ACESSIBILIDADE -->
+    <div class="accessibility-menu" id="menuAcessibilidade">
+        <div class="accessibility-header">
+            <h3>Acessibilidade</h3>
+            <button class="close-accessibility" id="closeAcessibilidade" aria-label="Fechar painel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="accessibility-grid">
+            <button class="access-btn"><i class="fa-regular fa-moon"></i><span>Escurecer</span></button>
+            <button class="access-btn"><i class="fa-solid fa-circle-half-stroke"></i><span>Alto<br>Contraste</span></button>
+            <button class="access-btn"><i class="fa-solid fa-text-height"></i><span>Texto<br>Maior</span></button>
+            <button class="access-btn"><i class="fa-solid fa-compress"></i><span>Texto<br>Menor</span></button>
+            <button class="access-btn"><i class="fa-solid fa-arrows-left-right"></i><span>Espaçamento</span></button>
+            <button class="access-btn"><i class="fa-solid fa-link"></i><span>Links</span></button>
+            <button class="access-btn"><i class="fa-solid fa-droplet"></i><span>Saturação</span></button>
+            <button class="access-btn"><i class="fa-regular fa-eye"></i><span>Fonte<br>Dislexia</span></button>
+            <button class="access-btn"><i class="fa-solid fa-rotate-left"></i><span>Reset</span></button>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // ALTERNÂNCIA DE ABAS
+        // ============================================
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const settingsPanes = document.querySelectorAll('.settings-pane');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                settingsPanes.forEach(pane => pane.classList.remove('active'));
+                const targetId = button.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // ============================================
+        // ACESSIBILIDADE
+        // ============================================
+        const body = document.body;
+        const btnAcessibilidade = document.getElementById('btnAcessibilidade');
+        const menuAcessibilidade = document.getElementById('menuAcessibilidade');
+        const closeAcessibilidade = document.getElementById('closeAcessibilidade');
+        const accessBtns = document.querySelectorAll('.access-btn');
+
+        if (btnAcessibilidade && menuAcessibilidade) {
+            btnAcessibilidade.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuAcessibilidade.classList.toggle('active');
+                btnAcessibilidade.setAttribute('aria-expanded', menuAcessibilidade.classList.contains('active'));
+            });
+
+            if (closeAcessibilidade) {
+                closeAcessibilidade.addEventListener('click', () => {
+                    menuAcessibilidade.classList.remove('active');
+                    btnAcessibilidade.setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            document.addEventListener('click', (e) => {
+                if (!menuAcessibilidade.contains(e.target) && e.target !== btnAcessibilidade) {
+                    menuAcessibilidade.classList.remove('active');
+                    btnAcessibilidade.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        function getA11ySetting(key, defaultValue) { return localStorage.getItem(`a11y_${key}`) || defaultValue; }
+        function setA11ySetting(key, value) { localStorage.setItem(`a11y_${key}`, value); }
+
+        function applyAllA11ySettings() {
+            body.classList.remove('a11y-dark-mode','a11y-high-contrast','a11y-large-text','a11y-small-text','a11y-spacing','a11y-highlight-links','a11y-saturation','a11y-grayscale','a11y-dyslexia');
+            if (getA11ySetting('darkMode','false')==='true') body.classList.add('a11y-dark-mode');
+            if (getA11ySetting('highContrast','false')==='true') body.classList.add('a11y-high-contrast');
+            if (getA11ySetting('textSize','normal')==='large') body.classList.add('a11y-large-text');
+            if (getA11ySetting('textSize','normal')==='small') body.classList.add('a11y-small-text');
+            if (getA11ySetting('spacing','false')==='true') body.classList.add('a11y-spacing');
+            if (getA11ySetting('highlightLinks','false')==='true') body.classList.add('a11y-highlight-links');
+            if (getA11ySetting('saturation','false')==='true') body.classList.add('a11y-saturation');
+            if (getA11ySetting('grayscale','false')==='true') body.classList.add('a11y-grayscale');
+            if (getA11ySetting('dyslexia','false')==='true') body.classList.add('a11y-dyslexia');
+        }
+
+        function updateButtonStates() {
+            accessBtns.forEach(btn => {
+                const spanText = btn.querySelector('span').textContent.trim().toLowerCase();
+                btn.style.background = ''; btn.style.border = ''; btn.style.color = '';
+                const icon = btn.querySelector('i'); if (icon) icon.style.color = '#8b5cf6';
+                let isActive = false;
+                if (spanText.includes('escurecer') && getA11ySetting('darkMode','false')==='true') isActive=true;
+                if (spanText.includes('alto') && getA11ySetting('highContrast','false')==='true') isActive=true;
+                if (spanText.includes('maior') && getA11ySetting('textSize','normal')==='large') isActive=true;
+                if (spanText.includes('menor') && getA11ySetting('textSize','normal')==='small') isActive=true;
+                if (spanText.includes('espaçamento') && getA11ySetting('spacing','false')==='true') isActive=true;
+                if (spanText.includes('links') && getA11ySetting('highlightLinks','false')==='true') isActive=true;
+                if (spanText.includes('saturação') && getA11ySetting('saturation','false')==='true') isActive=true;
+                if (spanText.includes('dislexia') && getA11ySetting('dyslexia','false')==='true') isActive=true;
+                if (spanText.includes('reset') && getA11ySetting('grayscale','false')==='true') isActive=true;
+                if (isActive) { btn.style.background='#8b5cf6'; btn.style.border='2px solid #8b5cf6'; btn.style.color='#ffffff'; if(icon) icon.style.color='#ffffff'; }
+            });
+        }
+
+        function resetAllSettings() {
+            ['darkMode','highContrast','textSize','spacing','highlightLinks','saturation','grayscale','dyslexia'].forEach(k => localStorage.removeItem(`a11y_${k}`));
+            body.classList.remove('a11y-dark-mode','a11y-high-contrast','a11y-large-text','a11y-small-text','a11y-spacing','a11y-highlight-links','a11y-saturation','a11y-grayscale','a11y-dyslexia');
+            accessBtns.forEach(btn => { btn.style.background=''; btn.style.border=''; btn.style.color=''; const icon=btn.querySelector('i'); if(icon) icon.style.color='#8b5cf6'; });
+        }
+
+        accessBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const spanText = btn.querySelector('span').textContent.trim().toLowerCase();
+                if (spanText.includes('reset')) { resetAllSettings(); return; }
+                if (spanText.includes('escurecer')) { const c=getA11ySetting('darkMode','false'); setA11ySetting('darkMode',c==='true'?'false':'true'); }
+                else if (spanText.includes('alto')) { const c=getA11ySetting('highContrast','false'); setA11ySetting('highContrast',c==='true'?'false':'true'); }
+                else if (spanText.includes('maior')) { const c=getA11ySetting('textSize','normal'); setA11ySetting('textSize',c==='large'?'normal':'large'); }
+                else if (spanText.includes('menor')) { const c=getA11ySetting('textSize','normal'); setA11ySetting('textSize',c==='small'?'normal':'small'); }
+                else if (spanText.includes('espaçamento')) { const c=getA11ySetting('spacing','false'); setA11ySetting('spacing',c==='true'?'false':'true'); }
+                else if (spanText.includes('links')) { const c=getA11ySetting('highlightLinks','false'); setA11ySetting('highlightLinks',c==='true'?'false':'true'); }
+                else if (spanText.includes('saturação')) { const c=getA11ySetting('saturation','false'); setA11ySetting('saturation',c==='true'?'false':'true'); }
+                else if (spanText.includes('dislexia')) { const c=getA11ySetting('dyslexia','false'); setA11ySetting('dyslexia',c==='true'?'false':'true'); }
+                applyAllA11ySettings(); updateButtonStates();
+            });
+        });
+
+        applyAllA11ySettings();
+        updateButtonStates();
+
+        console.log('🚀 Configurações inicializado!');
+    </script>
+</body>
+</html>

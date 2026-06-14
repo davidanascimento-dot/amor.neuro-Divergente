@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor NeuroDivergente - Loja ND</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="loja.css">
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar" aria-label="Navegação Lateral">
+        <div class="user-profile">
+            <img src="/img/avatar-1776703979307.png" alt="Avatar de TonyEsterco" class="avatar">
+            <div class="user-info">
+                <h4>TonyEsterco</h4>
+                <p>david.araujo.admin@amorneurodivergente.com</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu" aria-label="Menu principal">
+            <div class="nav-section">
+                <a href="/inicio.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-house"></i> Início</div></a>
+                <a href="/Recursos/recursos.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-book-open"></i> Recursos</div></a>
+                <a href="/Quem somos/quem-somos.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-users"></i> Quem Somos</div></a>
+                <a href="/Direitos/direitos.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-scale-balanced"></i> Direitos</div></a>
+                <a href="/blog/blog.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-pen-nib"></i> Blog</div></a>
+                <a href="/comunidade/comunidade.html" class="nav-item"><div class="nav-item-left"><i class="fa-regular fa-comments"></i> Comunidade</div></a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Loja & Doações</div>
+                <a href="/loja/loja.html" class="nav-item active" aria-current="page"><div class="nav-item-left"><i class="fa-solid fa-bag-shopping"></i> Loja</div></a>
+                <a href="/doações/doações.html" class="nav-item"><div class="nav-item-left"><i class="fa-regular fa-heart"></i> Doações</div></a>
+                <a href="/ferramentas/ferramentas.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-wrench"></i> Ferramentas</div></a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">IA</div>
+                <a href="/chat-Ia/chat-Ia.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-robot"></i> Chat com IA</div></a>
+                <a href="/painel-admin/painel.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-shield-halved"></i> Painel Admin IA</div></a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="/configurações/configurações.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-gear"></i> Configurações</div></a>
+            <a href="/inicio.html" class="nav-item"><div class="nav-item-left"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</div></a>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+       
+        <header class="navbar">
+            <div class="nav-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu lateral"><i class="fa-solid fa-bars"></i></button>
+                <a href="inicio.html" class="brand">
+                    <!-- LOGO EM IMAGEM -->
+                    <img src="/img/logo-LHN9gCw1.png" alt="Amor NeuroDivergente" class="brand-logo-img">
+                    <span class="brand-text">Amor NeuroDivergente</span>
+                </a>
+            </div>
+            <nav class="nav-center" aria-label="Navegação superior">
+                <a href="/inicio.html" class="nav-link">Início</a>
+                <a href="/Recursos/recursos.html" class="nav-link">Recursos</a>
+                <a href="/Quem somos/quem-somos.html" class="nav-link">Quem Somos</a>
+                <a href="/Direitos/direitos.html" class="nav-link">Direitos</a>
+                <a href="/blog/blog.html" class="nav-link">Blog</a>
+                <a href="/comunidade/comunidade.html" class="nav-link">Comunidade</a>
+                <a href="/chat-Ia/chat-Ia.html" class="nav-link">Chat com IA</a>
+            </nav>
+            <div class="nav-right">
+                <button class="search-btn" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <img src="/img/avatar-1776703979307.png" alt="Avatar" class="avatar" style="width:32px; height:32px; border-radius:50%; object-fit:cover;">
+            </div>
+        </header>
+
+        <!-- CONTEÚDO MANTIDO IGUAL -->
+        <section class="shop-filter-section" aria-labelledby="shopTitle">
+            <div class="shop-search-row">
+                <div class="shop-title-box" id="shopTitle">
+                    <div class="shop-icon-wrapper" aria-hidden="true"><i class="fa-solid fa-bag-shopping"></i></div>
+                    <span>Loja ND</span>
+                </div>
+                <div class="search-input-wrapper">
+                    <label for="productSearch" class="sr-only">Buscar produtos</label>
+                    <input type="text" id="productSearch" placeholder="Buscar produtos sobre neurodivergência..." autocomplete="off">
+                </div>
+            </div>
+
+            <div class="filter-row" role="group" aria-label="Filtros por Marketplace">
+                <button class="pill-btn active" data-filter="todos">Todos</button>
+                <button class="pill-btn" data-filter="aliexpress">AliExpress</button>
+                <button class="pill-btn" data-filter="shopee">Shopee</button>
+                <button class="pill-btn" data-filter="mercado-livre">Mercado Livre</button>
+                <button class="pill-btn" data-filter="amazon">Amazon</button>
+            </div>
+
+            <div class="filter-row" role="group" aria-label="Filtros por Categoria">
+                <button class="pill-btn active" data-filter="todos">Todos</button>
+                <button class="pill-btn" data-filter="vestuario">Vestuário</button>
+                <button class="pill-btn" data-filter="foco-tdah">Foco & TDAH</button>
+                <button class="pill-btn" data-filter="sensorial">Sensorial</button>
+                <button class="pill-btn" data-filter="livros">Livros</button>
+                <button class="pill-btn" data-filter="audio">Áudio</button>
+                <button class="pill-btn" data-filter="casa">Casa</button>
+                <button class="pill-btn" data-filter="criativo">Criativo</button>
+                <button class="pill-btn" data-filter="outros">Outros</button>
+            </div>
+        </section>
+
+        <section class="store-hero-banner" aria-labelledby="bannerTitle">
+            <div class="banner-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Curadoria Neurodivergente</div>
+            <h2 class="banner-title" id="bannerTitle">Produtos selecionados para o seu conforto e foco</h2>
+            <p class="banner-desc">Compre direto no marketplace de sua preferência: AliExpress, Shopee, Mercado Livre ou Amazon.</p>
+            <div class="banner-features">
+                <div class="feature-item"><i class="fa-solid fa-box"></i> Entrega via marketplace</div>
+                <div class="feature-item"><i class="fa-solid fa-shield"></i> Compra segura</div>
+                <div class="feature-item"><i class="fa-solid fa-heart"></i> Curadoria ND</div>
+            </div>
+        </section>
+
+        <main class="products-section">
+            <h3 class="section-header-title">Todos os produtos</h3>
+            <div class="product-counter" id="productCounter" aria-live="polite">Carregando...</div>
+            <div class="products-grid" id="productsGrid"></div>
+            <div class="loading-spinner" id="loadingSpinner" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i><p>Carregando mais produtos...</p></div>
+            <div class="no-results" id="noResults">Nenhum produto correspondente encontrado.</div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <nav class="footer-col"><h4>Links Rápidos</h4><ul><li><a href="#">Dúvidas frequentes</a></li><li><a href="#">Quem Somos</a></li><li><a href="#">Recursos</a></li><li><a href="#">Direitos</a></li><li><a href="#">Fale conosco</a></li></ul></nav>
+                <nav class="footer-col"><h4>Nosso Trabalho</h4><ul><li><a href="#">Comunidade</a></li><li><a href="#">Blog</a></li><li><a href="#">AcolherIA</a></li></ul></nav>
+                <nav class="footer-col"><h4>AmorNeuroDivergente</h4><ul><li><a href="#">Autismo</a></li><li><a href="#">TDAH</a></li><li><a href="#">Celebração</a></li></ul></nav>
+                <nav class="footer-col"><h4>Políticas</h4><ul><li><a href="#">Política de Privacidade</a></li><li><a href="#">Termos de Uso</a></li></ul></nav>
+                <div class="footer-col footer-socials"><div class="social-icons"><a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a><a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a></div></div>
+            </div>
+            <div class="footer-bottom"><div>&copy; 2026 Amor NeuroDivergente. Todos os direitos reservados.</div><nav style="display:flex; gap:15px;"><a href="#">Política de Privacidade</a><a href="#">Termos de Uso</a></nav></div>
+        </footer>
+    </div>
+
+    <button class="accessibility-btn" id="btnAcessibilidade"><i class="fa-solid fa-person"></i></button>
+    <div class="accessibility-menu" id="menuAcessibilidade"><div class="accessibility-header"><h3>Acessibilidade</h3><button class="close-accessibility" id="closeAcessibilidade"><i class="fa-solid fa-xmark"></i></button></div><div class="accessibility-grid"><button class="access-btn"><i class="fa-regular fa-moon"></i><span>Escurecer</span></button><button class="access-btn"><i class="fa-solid fa-circle-half-stroke"></i><span>Alto Contraste</span></button><button class="access-btn"><i class="fa-solid fa-text-height"></i><span>Texto Maior</span></button><button class="access-btn"><i class="fa-solid fa-compress"></i><span>Texto Menor</span></button><button class="access-btn"><i class="fa-solid fa-arrows-left-right"></i><span>Espaçamento</span></button><button class="access-btn"><i class="fa-solid fa-link"></i><span>Links</span></button><button class="access-btn"><i class="fa-solid fa-droplet"></i><span>Saturação</span></button><button class="access-btn"><i class="fa-regular fa-eye"></i><span>Fonte Dislexia</span></button><button class="access-btn"><i class="fa-solid fa-rotate-left"></i><span>Reset</span></button></div></div>
+
+    <script src="loja.js"></script>
+</body>
+</html>

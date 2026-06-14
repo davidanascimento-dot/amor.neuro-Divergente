@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor NeuroDivergente - Comunidade</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="comunidade.css">
+</head>
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <aside class="sidebar" id="sidebar" aria-label="Menu principal">
+        <div class="user-profile">
+            <img src="/img/avatar-1776703979307.png" alt="Avatar de TonyEsterco">
+            <div class="user-info">
+                <h4>TonyEsterco</h4>
+                <p>david.araujo.admin@amorneurodivergente.com</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu" aria-label="Menu principal">
+            <div class="nav-section">
+                <a href="/inicio.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-house"></i> <span>Início</span></div>
+                </a>
+                <a href="/Recursos/recursos.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-book-open"></i> <span>Recursos</span></div>
+                </a>
+                <a href="/Quem somos/quem-somos.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-users"></i> <span>Quem Somos</span></div>
+                </a>
+                <a href="/Direitos/direitos.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-scale-balanced"></i> <span>Direitos</span></div>
+                </a>
+                <a href="/blog/blog.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-pen-nib"></i> <span>Blog</span></div>
+                </a>
+                <a href="/comunidade/comunidade.html" class="nav-item active" aria-current="page">
+                    <div class="nav-item-left"><i class="fa-regular fa-comments"></i> <span>Comunidade</span></div>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Loja & Doações</div>
+                <a href="/loja/loja.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-bag-shopping"></i> <span>Loja</span></div>
+                </a>
+                <a href="/doações/doações.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-regular fa-heart"></i> <span>Doações</span></div>
+                </a>
+                <a href="/ferramentas/ferramentas.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-wrench"></i> <span>Ferramentas</span></div>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">IA</div>
+                <a href="/chat-Ia/chat-Ia.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-robot"></i> <span>Chat com IA</span></div>
+                </a>
+                <a href="/painel-admin/painel.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-shield-halved"></i> <span>Painel Admin IA</span></div>
+                </a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="/configurações/configurações.html" class="nav-item">
+                <div class="nav-item-left"><i class="fa-solid fa-gear"></i> <span>Configurações</span></div>
+            </a>
+            <a href="/inicio.html" class="nav-item">
+                <div class="nav-item-left"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Sair</span></div>
+            </a>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="navbar">
+            <div class="nav-left">
+                <button class="menu-toggle sidebar-toggle" id="sidebar-toggle-btn" aria-label="Abrir menu lateral"><i class="fa-solid fa-bars"></i></button>
+                <a href="/inicio.html" class="brand">
+                    <img src="/img/logo-LHN9gCw1.png" alt="Amor NeuroDivergente" class="brand-logo-img">
+                    <span class="brand-text">Amor NeuroDivergente</span>
+                </a>
+            </div>
+            <nav class="nav-center" aria-label="Navegação rápida">
+                <a href="/inicio.html" class="nav-link">Início</a>
+                <a href="/Recursos/recursos.html" class="nav-link">Recursos</a>
+                <a href="/Quem somos/quem-somos.html" class="nav-link">Quem Somos</a>
+                <a href="/Direitos/direitos.html" class="nav-link">Direitos</a>
+                <a href="/blog/blog.html" class="nav-link">Blog</a>
+                <a href="/comunidade/comunidade.html" class="nav-link active">Comunidade</a>
+                <a href="/chat-Ia/chat-Ia.html" class="nav-link">Chat com IA</a>
+            </nav>
+            <div class="nav-right">
+                <button class="search-btn" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <img src="/img/avatar-1776703979307.png" alt="Foto de perfil do usuário" class="avatar">
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <div class="badge-secure"><i class="fa-solid fa-shield-heart"></i> Espaço Seguro & Acolhedor</div>
+            <h1 class="hero-title">Nossa Comunidade</h1>
+            <p class="hero-subtitle">Um lugar onde sua mente é compreendida. Conecte-se, compartilhe experiências e encontre seu grupo de apoio.</p>
+            
+            <div class="hero-tags">
+                <a href="recursos.html" class="tag autismo">Autismo</a>
+                <a href="recursos.html" class="tag tdah">TDAH</a>
+                <a href="recursos.html" class="tag ahsd">AH/SD</a>
+                <a href="recursos.html" class="tag dislexia">Dislexia</a>
+                <a href="recursos.html" class="tag geral">Geral</a>
+            </div>
+
+            <button class="btn-join"><i class="fa-solid fa-users"></i> Unir-se</button>
+        </section>
+
+        <main class="content-container">
+            <div class="main-content-area">
+                <div class="tabs-container">
+                    <button class="tab-btn active" data-tab="forum"><i class="fa-regular fa-comments"></i> Fórum</button>
+                    <button class="tab-btn" data-tab="grupos"><i class="fa-solid fa-users"></i> Grupos</button>
+                    <button class="tab-btn" data-tab="eventos"><i class="fa-regular fa-calendar"></i> Eventos</button>
+                    <button class="tab-btn" data-tab="conversa"><i class="fa-solid fa-message"></i> Conversa</button>
+                </div>
+
+                <!-- SEÇÃO FÓRUM -->
+                <div class="tab-content active" id="tab-forum">
+                    <div class="feed-column">
+                        <div class="feed-header">
+                            <div class="section-title"><i class="fa-solid fa-star"></i> Destaque da Comunidade</div>
+                            <button class="btn-create-post" id="openModalBtn"><i class="fa-solid fa-plus"></i> Criar Post</button>
+                        </div>
+                        <div class="posts-grid" id="postsGrid"></div>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO GRUPOS -->
+                <div class="tab-content" id="tab-grupos">
+                    <div class="groups-section-wrapper">
+                        <div class="section-header-custom">
+                            <h3><i class="fa-solid fa-users"></i> Grupos da Comunidade</h3>
+                            <p class="section-sub-custom">Entre nos grupos, converse com outros membros e compartilhe experiências.</p>
+                        </div>
+                        <div class="groups-grid-custom" id="groupsGrid"></div>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO EVENTOS -->
+                <div class="tab-content" id="tab-eventos">
+                    <div class="events-section-wrapper">
+                        <div class="section-header-custom">
+                            <h3><i class="fa-regular fa-calendar-alt"></i> Próximos Eventos</h3>
+                            <p class="section-sub-custom">Confirme presença e participe dos nossos encontros ao vivo.</p>
+                        </div>
+                        <div class="events-grid-custom" id="eventsGrid"></div>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO CONVERSA - ESTRUTURA CORRIGIDA COM SELEÇÃO DE GRUPOS -->
+                <div class="tab-content" id="tab-conversa">
+                    <div class="chat-full-container">
+                        <div class="chat-sidebar">
+                            <div class="chat-sidebar-header">
+                                <i class="fa-solid fa-comments"></i>
+                                <h3>Meus Grupos</h3>
+                            </div>
+                            <div class="groups-list" id="groupsListContainer">
+                                <!-- Grupos serão inseridos dinamicamente pelo JS -->
+                            </div>
+                        </div>
+                        <div class="chat-main">
+                            <div class="chat-main-header" id="chatMainHeader">
+                                <div class="chat-main-header-info">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>Selecione um grupo</span>
+                                </div>
+                            </div>
+                            <div class="chat-messages-area" id="chatMessagesArea">
+                                <div class="chat-messages" id="chatMessages">
+                                    <div class="chat-placeholder">
+                                        <i class="fa-solid fa-message"></i>
+                                        <p>Selecione um grupo para começar a conversar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input-area">
+                                <input type="text" id="chatInput" placeholder="Digite sua mensagem..." class="chat-input">
+                                <button id="sendChatBtn" class="chat-send-btn">
+                                    <i class="fa-solid fa-paper-plane"></i> Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="widgets-column" aria-label="Informações complementares">
+                <div class="widget-card">
+                    <div class="widget-title"><i class="fa-solid fa-shield"></i> Regras da Casa</div>
+                    <ul class="rules-list">
+                        <li><i class="fa-solid fa-check"></i> Respeito mútuo é a base.</li>
+                        <li><i class="fa-solid fa-triangle-exclamation"></i> Use avisos para conteúdo sensível.</li>
+                        <li><i class="fa-solid fa-handshake"></i> Diagnóstico não é competição.</li>
+                    </ul>
+                </div>
+
+                <div class="widget-card ia-box">
+                    <div class="widget-title"><i class="fa-solid fa-robot"></i> Pergunte à AcolherIA</div>
+                    <p class="ia-desc">Nossa IA está pronta para ajudar você a entender termos ou mediar diálogos.</p>
+                    <button class="btn-ia-chat"><i class="fa-solid fa-wand-magic-sparkles"></i> Abrir Chat de Apoio</button>
+                </div>
+
+                <div class="widget-card promo-card">
+                    <div class="promo-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div class="promo-title">Bem-vindo à nossa comunidade!</div>
+                    <p class="promo-desc">Este é um espaço seguro e acolhedor para compartilhar experiências, buscar apoio e aprender juntos.</p>
+                    <button class="btn-promo-action">Participar</button>
+                </div>
+
+                <div class="widget-card">
+                    <div class="cloud-title">Categorias</div>
+                    <div class="tags-cloud">
+                        <a href="recursos.html" class="cloud-tag">TDAH</a>
+                        <a href="recursos.html" class="cloud-tag">TEA</a>
+                        <a href="recursos.html" class="cloud-tag">DEA</a>
+                        <a href="recursos.html" class="cloud-tag">DA</a>
+                        <a href="recursos.html" class="cloud-tag">TPS</a>
+                        <a href="recursos.html" class="cloud-tag">TAG</a>
+                    </div>
+                    <div class="cloud-title">Sugestões</div>
+                    <div class="tags-cloud">
+                        <a href="recursos.html" class="cloud-tag">Desabafos</a>
+                        <a href="recursos.html" class="cloud-tag">Rotina</a>
+                        <a href="recursos.html" class="cloud-tag">Autocuidado</a>
+                    </div>
+                </div>
+
+                <div class="widget-card">
+                    <div class="widget-title"><i class="fa-solid fa-chart-line"></i> Estatísticas</div>
+                    <ul class="rules-list">
+                        <li><i class="fa-regular fa-message"></i> 156 posts hoje</li>
+                        <li><i class="fa-solid fa-users"></i> 234 membros ativos</li>
+                        <li><i class="fa-regular fa-calendar"></i> 3 eventos esta semana</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="recursos.html">Dúvidas frequentes</a></li>
+                        <li><a href="quem-somos.html">Quem Somos</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="direitos.html">Direitos</a></li>
+                        <li><a href="contato.html">Fale conosco (SAC)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nosso Trabalho</h4>
+                    <ul>
+                        <li><a href="comunidade.html">Comunidade</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="chat-Ia.html">AcolherIA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>AmorNeuroDivergente</h4>
+                    <ul>
+                        <li><a href="autismo.html">Autismo</a></li>
+                        <li><a href="tdah.html">TDAH</a></li>
+                        <li><a href="celebracao.html">Celebração</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-socials">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Amor NeuroDivergente. Todos os direitos reservados.</div>
+                <div class="footer-bottom-links">
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- MODAL DE POST -->
+    <div class="modal" id="postModal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Criar Novo Post</h3>
+                <button class="modal-close" id="closeModalBtn" aria-label="Fechar modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="postContentInput" placeholder="O que está na sua mente hoje? Compartilhe com a comunidade de forma acolhedora..."></textarea>
+                <button class="btn-submit-post" id="submitPostBtn">Postar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÃO DE ACESSIBILIDADE -->
+    <button class="accessibility-btn" id="btnAcessibilidade" aria-label="Abrir menu de acessibilidade">
+        <i class="fa-solid fa-universal-access"></i>
+    </button>
+
+    <!-- MENU DE ACESSIBILIDADE -->
+    <div class="accessibility-menu" id="menuAcessibilidade">
+        <div class="accessibility-header">
+            <h3><i class="fa-solid fa-universal-access"></i> Acessibilidade</h3>
+            <button class="close-accessibility" id="closeAcessibilidade" aria-label="Fechar painel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="accessibility-grid">
+            <button class="access-btn"><i class="fa-regular fa-moon"></i><span>Modo Escuro</span></button>
+            <button class="access-btn"><i class="fa-solid fa-circle-half-stroke"></i><span>Alto Contraste</span></button>
+            <button class="access-btn"><i class="fa-solid fa-text-height"></i><span>Aumentar Texto</span></button>
+            <button class="access-btn"><i class="fa-solid fa-text-height"></i><span>Diminuir Texto</span></button>
+            <button class="access-btn"><i class="fa-solid fa-arrows-left-right"></i><span>Espaçamento</span></button>
+            <button class="access-btn"><i class="fa-solid fa-link"></i><span>Destacar Links</span></button>
+            <button class="access-btn"><i class="fa-solid fa-droplet"></i><span>Saturação</span></button>
+            <button class="access-btn"><i class="fa-solid fa-font"></i><span>Fonte Dislexia</span></button>
+            <button class="access-btn"><i class="fa-solid fa-rotate-left"></i><span>Reset</span></button>
+        </div>
+    </div>
+
+    <div id="toastMsg" class="toast-msg-custom"></div>
+
+    <script src="comunidade.js"></script>
+</body>
+</html>

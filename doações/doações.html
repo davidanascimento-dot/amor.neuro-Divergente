@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor NeuroDivergente - Faça uma Doação</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="doações.css">
+</head>
+<body>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar" id="sidebar" aria-label="Menu principal">
+        <div class="user-profile">
+            <img src="/img/avatar-1776703979307.png" alt="TonyEsterco" class="avatar">
+            <div class="user-info">
+                <h4>TonyEsterco</h4>
+                <p>david.araujo.admin@amorneurodivergente.com</p>
+            </div>
+        </div>
+
+        <nav class="nav-menu" aria-label="Menu principal">
+            <div class="nav-section">
+                <a href="/inicio.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-house"></i> Início</div>
+                </a>
+                <a href="/Recursos/recursos.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-book-open"></i> Recursos</div>
+                </a>
+                <a href="/Quem somos/quem-somos.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-users"></i> Quem Somos</div>
+                </a>
+                <a href="/Direitos/direitos.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-scale-balanced"></i> Direitos</div>
+                </a>
+                <a href="/blog/blog.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-pen-nib"></i> Blog</div>
+                </a>
+                <a href="/comunidade/comunidade.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-regular fa-comments"></i> Comunidade</div>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Loja & Doações</div>
+                <a href="/loja/loja.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-bag-shopping"></i> Loja</div>
+                </a>
+                <a href="/doações/doações.html" class="nav-item active" aria-current="page">
+                    <div class="nav-item-left"><i class="fa-regular fa-heart"></i> Doações</div>
+                </a>
+                <a href="/ferramentas/ferramentas.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-wrench"></i> Ferramentas</div>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">IA</div>
+                <a href="/chat-Ia/chat-Ia.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-robot"></i> Chat com IA</div>
+                </a>
+                <a href="/painel-admin/painel.html" class="nav-item">
+                    <div class="nav-item-left"><i class="fa-solid fa-shield-halved"></i> Painel Admin IA</div>
+                </a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="/configurações/configurações.html" class="nav-item">
+                <div class="nav-item-left"><i class="fa-solid fa-gear"></i> Configurações</div>
+            </a>
+            <a href="/inicio.html" class="nav-item">
+                <div class="nav-item-left"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</div>
+            </a>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="navbar">
+            <div class="nav-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+                <a href="/inicio.html" class="brand">
+                    <!-- LOGO EM IMAGEM -->
+                    <img src="/img/logo-LHN9gCw1.png" alt="Amor NeuroDivergente" class="brand-logo-img">
+                    <span class="brand-text">Amor NeuroDivergente</span>
+                </a>
+            </div>
+            <div class="nav-center">
+                <a href="/inicio.html" class="nav-link">Início</a>
+                <a href="/Recursos/recursos.html" class="nav-link">Recursos</a>
+                <a href="/Quem somos/quem-somos.html" class="nav-link">Quem Somos</a>
+                <a href="/Direitos/direitos.html" class="nav-link">Direitos</a>
+                <a href="/blog/blog.html" class="nav-link">Blog</a>
+                <a href="/comunidade/comunidade.html" class="nav-link">Comunidade</a>
+                <a href="/chat-Ia/chat-Ia.html" class="nav-link">Chat com IA</a>
+            </div>
+            <div class="nav-right">
+                <button class="search-btn" aria-label="Pesquisar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <img src="/img/avatar-1776703979307.png" alt="Avatar" class="avatar" style="width:32px; height:32px; border-radius: 50%; object-fit: cover;">
+            </div>
+        </header>
+
+        <!-- CONTEÚDO MANTIDO IGUAL -->
+        <section class="donation-hero">
+            <h1>Faça uma Doação</h1>
+            <p>Sua contribuição ajuda a manter este espaço seguro e acessível para todos.</p>
+        </section>
+
+        <main class="donation-content">
+            <div class="donation-card">
+                <div id="donationForm">
+                    <div class="presets-grid">
+                        <button class="preset-btn" data-value="10.00">R$ 10</button>
+                        <button class="preset-btn active" data-value="25.00">R$ 25</button>
+                        <button class="preset-btn" data-value="50.00">R$ 50</button>
+                        <button class="preset-btn" data-value="100.00">R$ 100</button>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label" for="customAmount">Outro valor</label>
+                        <div class="custom-amount-box">
+                            <input type="text" id="customAmount" value="R$ 25,00">
+                        </div>
+                    </div>
+                    <button class="btn-submit-donation" id="btnDonate">
+                        <span><i class="fa-solid fa-heart"></i></span> Doar agora
+                    </button>
+                </div>
+                <div class="checkout-box" id="checkoutBox">
+                    <h3>Muito obrigado pelo apoio! 💜</h3>
+                    <p id="checkoutValueText">Sua doação de R$ 25,00 faz toda a diferença.</p>
+                    <div class="qr-mock">[ QR CODE PIX SIMULADO ]</div>
+                    <p class="checkout-hint">Escaneie o código acima no app do seu banco para concluir.</p>
+                    <button class="btn-back" id="btnBack">Alterar valor</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>Links Rápidos</h4><ul><li><a href="recursos.html">Dúvidas frequentes</a></li><li><a href="quem-somos.html">Quem Somos</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="direitos.html">Direitos</a></li><li><a href="contato.html">Fale conosco (SAC)</a></li></ul></div>
+                <div class="footer-col"><h4>Nosso Trabalho</h4><ul><li><a href="comunidade.html">Comunidade</a></li><li><a href="blog.html">Blog</a></li><li><a href="chat-Ia.html">AcolherIA</a></li></ul></div>
+                <div class="footer-col"><h4>AmorNeuroDivergente</h4><ul><li><a href="direitos.html">Autismo</a></li><li><a href="direitos.html">TDAH</a></li><li><a href="inicio.html">Celebração</a></li></ul></div>
+                <div class="footer-col"><h4>Políticas</h4><ul><li><a href="#">Política de Privacidade</a></li><li><a href="#">Termos de Uso</a></li></ul></div>
+                <div class="footer-col footer-socials">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Amor NeuroDivergente. Todos os direitos reservados.</div>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- BOTÃO DE ACESSIBILIDADE (ESTILO LOJA) -->
+    <button class="accessibility-btn" id="btnAcessibilidade" aria-label="Abrir menu de acessibilidade">
+        <i class="fa-solid fa-person"></i>
+    </button>
+
+    <!-- MENU DE ACESSIBILIDADE (ESTILO LOJA) -->
+    <div class="accessibility-menu" id="menuAcessibilidade">
+        <div class="accessibility-header">
+            <h3>Acessibilidade</h3>
+            <button class="close-accessibility" id="closeAcessibilidade" aria-label="Fechar painel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="accessibility-grid">
+            <button class="access-btn"><i class="fa-regular fa-moon"></i><span>Escurecer</span></button>
+            <button class="access-btn"><i class="fa-solid fa-circle-half-stroke"></i><span>Alto<br>Contraste</span></button>
+            <button class="access-btn"><i class="fa-solid fa-text-height"></i><span>Texto<br>Maior</span></button>
+            <button class="access-btn"><i class="fa-solid fa-compress"></i><span>Texto<br>Menor</span></button>
+            <button class="access-btn"><i class="fa-solid fa-arrows-left-right"></i><span>Espaçamento</span></button>
+            <button class="access-btn"><i class="fa-solid fa-link"></i><span>Links</span></button>
+            <button class="access-btn"><i class="fa-solid fa-droplet"></i><span>Saturação</span></button>
+            <button class="access-btn"><i class="fa-regular fa-eye"></i><span>Fonte<br>Dislexia</span></button>
+            <button class="access-btn"><i class="fa-solid fa-rotate-left"></i><span>Reset</span></button>
+        </div>
+    </div>
+
+    <script src="doações.js"></script>
+</body>
+</html>
