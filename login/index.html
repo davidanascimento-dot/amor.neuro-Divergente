@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Amor Neurodivergente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        
+        <!-- CARD DE LOGIN -->
+        <div class="auth-card" id="loginCard">
+            <!-- LOGO EM IMAGEM -->
+            <div class="logo-container">
+                <img src="/img/logo-LHN9gCw1.png" alt="Amor NeuroDivergente" class="logo-img">
+            </div>
+
+            <h2>Fazer Login</h2>
+            <p class="subtitle">Bem-vindo de volta!</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="loginEmail" placeholder="E-mail" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="loginPassword" placeholder="Senha" required>
+                    <i class="fa-regular fa-eye toggle-password" data-target="loginPassword"></i>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Lembrar-me
+                    </label>
+                    <a href="#" class="forgot-link">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-right-to-bracket"></i> Entrar
+                </button>
+            </form>
+
+            <p class="footer-text">
+                Não tem uma conta? 
+                <a href="#" class="toggle-link" data-show="registerCard">Cadastre-se</a>
+            </p>
+            <a href="/inicio.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+        </div>
+
+        <!-- CARD DE CADASTRO -->
+        <div class="auth-card" id="registerCard" style="display: none;">
+            <!-- LOGO EM IMAGEM -->
+            <div class="logo-container">
+                <img src="/img/logo-LHN9gCw1.png" alt="Amor NeuroDivergente" class="logo-img">
+            </div>
+
+            <h2>Criar Conta</h2>
+            <p class="subtitle">Junte-se à nossa comunidade!</p>
+
+            <form id="registerForm">
+                <div class="input-row">
+                    <div class="input-group half">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="regFirstName" placeholder="Nome" required>
+                    </div>
+                    <div class="input-group half">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="regLastName" placeholder="Sobrenome" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="regEmail" placeholder="E-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="regPassword" placeholder="Senha" required>
+                    <i class="fa-regular fa-eye toggle-password" data-target="regPassword"></i>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="regConfirmPassword" placeholder="Confirmar senha" required>
+                    <i class="fa-regular fa-eye toggle-password" data-target="regConfirmPassword"></i>
+                </div>
+
+                <div class="terms-check">
+                    <input type="checkbox" id="termsCheck" required>
+                    <label for="termsCheck">Aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a></label>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-user-plus"></i> Criar conta
+                </button>
+            </form>
+
+            <p class="footer-text">
+                Já tem uma conta? 
+                <a href="#" class="toggle-link" data-show="loginCard">Fazer login</a>
+            </p>
+            <a href="/inicio.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Voltar ao site</a>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
